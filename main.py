@@ -263,14 +263,19 @@ with st.expander("Summary Table"):
         
 ## Create a sctter plot
 
-data1=px.scatter(filtered_df,x="Sales",y="Profit",size="Quantity")
-data1.update_layout(
-    title="Relationship between Sales and Profits using Scatter plot.",
-    title_font=dict(size=20),
-    xaxis=dict(title="Sales", title_font=dict(size=19)),
-    yaxis=dict(title="Profit", title_font=dict(size=19))
+fig_scatter = px.scatter(
+    filtered_df, 
+    x="Sales", 
+    y="Profit", 
+    size="Quantity", 
+    color="Category", 
+    hover_name="Sub-Category",
+    hover_data=["Region", "State", "City"],
+    template="plotly_white"
 )
-st.plotly_chart(data1,use_container_width=True) 
+fig_scatter.update_layout(title="Sales vs Profit Scatter by Category")
+st.plotly_chart(fig_scatter, use_container_width=True)
+
    
 ## 
 with st.expander("View Data"):
