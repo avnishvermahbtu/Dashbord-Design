@@ -4,6 +4,60 @@ import plotly.express as px
 import os
 import warnings
 warnings.filterwarnings('ignore')
+# =============================
+# CUSTOM FRONT PAGE BANNER
+# =============================
+
+st.markdown("""
+    <div style="
+        background: linear-gradient(90deg, #1e3c72, #2a5298);
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;">
+        ✨ Welcome to the SuperStore Interactive Analytics Dashboard ✨
+    </div>
+""", unsafe_allow_html=True)
+
+st.write("")  # spacing
+
+st.info("""
+**How to Use This Dashboard:**
+1️⃣ Upload your data file OR use default dataset  
+2️⃣ Filter using Region / State / City from the sidebar  
+3️⃣ Explore dynamic charts, KPIs & time-series trends  
+4️⃣ Download reports instantly!  
+""")
+
+st.markdown("""
+    <style>
+        .main {
+            background-color: #F8F9FA;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+
+# =============================
+# SIDEBAR FILTERS (Enhanced)
+# =============================
+
+st.sidebar.markdown("""
+    <h2 style='text-align:center; color:#4CAF50;'>🧭 Filters & Controls</h2>
+    <hr style='margin:5px 0px;'>
+""", unsafe_allow_html=True)
+
+st.sidebar.info("Apply filters below to customize your dashboard view.")
+
+# Optional Mode Switch
+view_mode = st.sidebar.radio("Select View Mode:", ["📊 Overview Mode", "📈 Detailed Analysis"])
+
+# Tum is_mode ke hisaab se kuch charts show/hide bhi kar sakte ho later!
+
+
+
 
 # =============================
 # DASHBOARD TITLE AND SETTINGS
