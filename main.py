@@ -267,7 +267,7 @@ fig_scatter = px.scatter(
     filtered_df, 
     x="Sales", 
     y="Profit", 
-    size="Quantity", 
+    size="Quantity",
     color="Category", 
     hover_name="Sub-Category",
     hover_data=["Region", "State", "City"],
