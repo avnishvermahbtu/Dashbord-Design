@@ -1,4 +1,4 @@
-import streamlit as st 
+import streamlit as st
 import pandas as pd   
 import plotly.express as px
 import os
@@ -40,6 +40,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+
 # =============================
 # SIDEBAR FILTERS (Enhanced)
 # =============================
@@ -79,7 +80,7 @@ if fl is not None:
     df=pd.read_excel(filename)
 else:
     os.chdir(r"C:\Users\verma\OneDrive\Desktop\Streamlit")
-    df = pd.read_excel("Superstore.xlsx")
+    df = pd.read_excel("Superstore.xls")
     
 # =============================
 # DATE FILTER SECTION
